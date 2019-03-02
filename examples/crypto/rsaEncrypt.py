@@ -3,11 +3,13 @@
 
 import rsa
 
-def doEncrypt(plainMessage):
+
+def do_encrypt(plain_data):
     # rsa.encrypt(plainMessage, )
     pass
 
-def doDecrypt():
+
+def do_decrypt(cipher_data):
 
     pass
 

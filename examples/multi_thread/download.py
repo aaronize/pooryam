@@ -7,10 +7,12 @@ import Queue
 import threading
 import os
 
-class download(threading.Thread):
+
+class Download(threading.Thread):
     def __init__(self, queue):
         threading.Thread.__init__(self)
         self.queue = queue
+
     def run(self):
         while True:
             if not self.queue.empty():
@@ -19,6 +21,7 @@ class download(threading.Thread):
             else:
                 break
 
-def doDownload(url, rule, num, start, end, decoding=None):
+
+def do_download(url, rule, num, start, end, decoding=None):
     if not decoding:
         decoding = 'utf8'
