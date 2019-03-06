@@ -8,4 +8,4 @@ DB = {
     'PORT': 3306,
 }
 
-AUTH_TOKEN = "c6275ca833ac06c83926ccb00dff4c82"
+AUTH_TOKEN = "*"
