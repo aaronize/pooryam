@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca97255a-2ebf-408e-86cb-4a424d081006" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/exec_cmd/subprocess_popen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/self_del.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/highest_oom_score_top_ten.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/exec_cmd/os_popen.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/exec_cmd/os_popen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/mon_alert/monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/mon_alert/monitor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,15 +29,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
+          <entry key="md" value="1" />
           <entry key="py" value="15" />
-          <entry key="sh" value="2" />
+          <entry key="sh" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Bash" value="3" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="15" />
         </counts>
       </usages-collector>
@@ -49,12 +48,12 @@
           <entry key="dummy" value="7" />
           <entry key="gitignore" value="20" />
           <entry key="py" value="2993" />
-          <entry key="sh" value="68" />
+          <entry key="sh" value="137" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="68" />
+          <entry key="Bash" value="137" />
           <entry key="PLAIN_TEXT" value="27" />
           <entry key="Python" value="2993" />
         </counts>
@@ -111,7 +110,7 @@
             <state relative-caret-position="160">
               <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
               <folding>
-                <marker date="1551877983623" expanded="true" signature="76:349" ph="..." />
+                <marker date="1551964432463" expanded="true" signature="76:349" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,11 +119,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/exec_cmd/subprocess_popen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="160">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <marker date="1551881266917" expanded="true" signature="84:374" ph="..." />
+                <marker date="1551964432464" expanded="true" signature="84:374" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/highest_oom_score_top_ten.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -133,16 +141,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="9" selection-start-line="9" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/subprocess.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="336" column="37" selection-start-line="336" selection-start-column="37" selection-end-line="336" selection-end-column="37" />
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -154,8 +153,8 @@
               <caret line="84" column="68" lean-forward="true" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
               <folding>
                 <element signature="e#47#56#0" expanded="true" />
-                <marker date="1551878462463" expanded="true" signature="655:656" ph="..." />
-                <marker date="1551878462463" expanded="true" signature="655:2431" ph="..." />
+                <marker date="1551964432465" expanded="true" signature="655:656" ph="..." />
+                <marker date="1551964432465" expanded="true" signature="655:2431" ph="..." />
               </folding>
             </state>
           </provider>
@@ -202,6 +201,7 @@
         <option value="$PROJECT_DIR$/examples/mon_alert/monitor.py" />
         <option value="$PROJECT_DIR$/examples/exec_cmd/subprocess_popen.py" />
         <option value="$PROJECT_DIR$/source/self_del.sh" />
+        <option value="$PROJECT_DIR$/source/highest_oom_score_top_ten.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -213,8 +213,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="107" />
-    <option name="y" value="34" />
+    <option name="x" value="13" />
+    <option name="y" value="35" />
     <option name="width" value="1522" />
     <option name="height" value="820" />
   </component>
@@ -374,10 +374,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="34" width="1522" height="820" extended-state="0" />
+    <frame x="13" y="35" width="1522" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16484268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16484268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="File Transfer" weight="0.3483965" />
@@ -392,7 +392,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43440235" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43440235" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -491,7 +491,7 @@
         <state relative-caret-position="160">
           <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding>
-            <marker date="1551877983623" expanded="true" signature="76:349" ph="..." />
+            <marker date="1551964432463" expanded="true" signature="76:349" ph="..." />
           </folding>
         </state>
       </provider>
@@ -502,8 +502,8 @@
           <caret line="84" column="68" lean-forward="true" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
           <folding>
             <element signature="e#47#56#0" expanded="true" />
-            <marker date="1551878462463" expanded="true" signature="655:656" ph="..." />
-            <marker date="1551878462463" expanded="true" signature="655:2431" ph="..." />
+            <marker date="1551964432465" expanded="true" signature="655:656" ph="..." />
+            <marker date="1551964432465" expanded="true" signature="655:2431" ph="..." />
           </folding>
         </state>
       </provider>
@@ -532,20 +532,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/exec_cmd/subprocess_popen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="160">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <marker date="1551881266917" expanded="true" signature="84:374" ph="..." />
+            <marker date="1551964432464" expanded="true" signature="84:374" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/highest_oom_score_top_ten.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="10" />
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
