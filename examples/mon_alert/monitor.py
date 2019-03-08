@@ -24,7 +24,13 @@ SENDER = '*@163.com'
 def exec_cmd(ip):
     cmd = 'ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 -l root %s "free -m | sed -n \'2p\' | awk \'{print \$2 \\"\t\\" \$3 \\"\t\\" \$4}\'"' % ip
 
-    output = os.popen(cmd, 'r').read().split()
+    p = os.popen(cmd, 'r')
+    output = p.read().split()
+
+    err_code = p.close()
+    if err_code:
+        output = err_code
+
     return output
 
 
