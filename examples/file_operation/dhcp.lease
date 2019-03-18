@@ -1,0 +1,48 @@
+SERVER01 192.168.152.174 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}
+SERVER02 192.168.168.154 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}
+SERVER03 192.168.152.182 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}
+SERVER04 192.168.152.175 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}
+SERVER06 192.168.168.174 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}SERVER07 192.168.150.113 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}SERVER08 192.168.152.160 {
+    SN 123dfsdfwefsdf
+    CreateTime 2019-03-18 20:13:00
+    ExpireTime 2019-03-18 21:00:01
+    OtherInfo   infoteste
+    Thisis      a test info
+}
+
