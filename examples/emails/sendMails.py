@@ -9,8 +9,8 @@ from email.header import Header
 
 def send_mail(type, send_to):
     mail_host = 'smtp.163.com'
-    mail_user = 'cdswit'
-    mail_pass = '327dcc6fab5f262a'
+    mail_user = '*'
+    mail_pass = '*'
 
     sender = 'cdswit@163.com'
     receivers = send_to
