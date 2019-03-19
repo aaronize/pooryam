@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -39,7 +38,9 @@ def send_mail(type, send_to):
         print 'ERROR: SMTPException'
     finally:
         smtp_obj.close()
-=======
+
+
+
 #!/usr/bin/env python
 # coding: utf-8
 
@@ -71,32 +72,31 @@ def send_mail(type, send_to):
 # server.sendmail(from_addr, [to_addr], msg.as_string())
 # server.close()
 
-
-import smtplib
-from email.mime.text import MIMEText
-from email.header import Header
-
-sender = 'cdswit@163.com'
-receivers = ['aaron.chen@ucloud.cn']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
-
-# 第三方 SMTP 服务
-mail_host = "smtp.163.com"  # 设置服务器
-mail_user = "cdswit@163.com"  # 用户名
-mail_pass = "daichen1124"  # 口令
-
-message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
-message['From'] = Header("hello, from_msg send by python", 'utf-8')
-message['To'] = Header("to_msg 测试", 'utf-8')
-
-subject = 'Python SMTP 邮件测试'
-message['Subject'] = Header(subject, 'utf-8')
-
-try:
-    smtpObj = smtplib.SMTP()
-    smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
-    smtpObj.login(mail_user, mail_pass)
-    smtpObj.sendmail(sender, receivers, message.as_string())
-    print "邮件发送成功"
-except smtplib.SMTPException:
-    print "Error: 无法发送邮件"
->>>>>>> from_hp
+#
+# import smtplib
+# from email.mime.text import MIMEText
+# from email.header import Header
+#
+# sender = 'cdswit@163.com'
+# receivers = ['aaron.chen@ucloud.cn']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+#
+# # 第三方 SMTP 服务
+# mail_host = "smtp.163.com"  # 设置服务器
+# mail_user = "cdswit@163.com"  # 用户名
+# mail_pass = "daichen1124"  # 口令
+#
+# message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
+# message['From'] = Header("hello, from_msg send by python", 'utf-8')
+# message['To'] = Header("to_msg 测试", 'utf-8')
+#
+# subject = 'Python SMTP 邮件测试'
+# message['Subject'] = Header(subject, 'utf-8')
+#
+# try:
+#     smtpObj = smtplib.SMTP()
+#     smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
+#     smtpObj.login(mail_user, mail_pass)
+#     smtpObj.sendmail(sender, receivers, message.as_string())
+#     print "邮件发送成功"
+# except smtplib.SMTPException:
+#     print "Error: 无法发送邮件"
