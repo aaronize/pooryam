@@ -82,8 +82,8 @@ def send_mail(type, send_to):
 #
 # # 第三方 SMTP 服务
 # mail_host = "smtp.163.com"  # 设置服务器
-# mail_user = "cdswit@163.com"  # 用户名
-# mail_pass = "daichen1124"  # 口令
+# mail_user = "*"  # 用户名
+# mail_pass = "*"  # 口令
 #
 # message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
 # message['From'] = Header("hello, from_msg send by python", 'utf-8')
