@@ -2,9 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import time
+
+'''
+这种方式的问题在于，读取文件写入文件的过程中，文件有可能有其他的写入
+'''
 
 
-def del_line(path, key_word):
+def del_lines(path, key_word):
     sign = False
 
     with open(path, 'r') as f:
@@ -23,9 +28,8 @@ def del_line(path, key_word):
 if __name__ == "__main__":
     path = sys.argv[1]
     ip = sys.argv[2]
-    print '释放ip：', path, ip
 
-    file_path = './dhcp.lease'
-    release_ip = '192.168.152.172'
+    local_time = time.asctime(time.localtime(time.time()))
+    print '[%s] 操作%s释放IP:%s' % (local_time, path, ip)
 
-    del_line(path, ip)
+    del_lines(path, ip)
