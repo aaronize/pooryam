@@ -19,7 +19,7 @@ def gen_mac():
 
 def gen_mac_2():
     mac = ''
-    for i in range(0, 2, 1):
+    for i in range(0, 3, 1):
         tmp = hex(random.randint(0, 255))[2:4]
         if len(tmp) == 1:
             tmp = '0' + tmp
