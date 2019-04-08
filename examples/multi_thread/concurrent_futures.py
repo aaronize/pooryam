@@ -4,6 +4,7 @@
 import re
 import time
 import requests
+from concurrent import futures
 import subprocess as sp
 
 URL = ''
@@ -56,7 +57,11 @@ def callback_after(arg):
 
 
 def release(info_list):
-    pass
+    executor = futures.ThreadPoolExecutor(10)
+
+    for info in info_list:
+        cmd = 'scp {} root@{}:/root/'.format(info['path'], info['ip'])
+        executor.submit(exec_cmd)
 
 
 if __name__ == '__main__':
