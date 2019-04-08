@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import logging
+
 
 def digit_sum(num):
     num_str = str(num)
@@ -12,5 +14,7 @@ def digit_sum(num):
 
 
 if __name__ == "__main__":
-
+    # logging.debug('This is a debug log.')
+    logging.error('This is a error log.')
+    logging.getLogger()
     print digit_sum(1021196)

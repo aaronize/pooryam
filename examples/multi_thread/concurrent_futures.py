@@ -3,6 +3,7 @@
 
 import re
 import time
+import logging
 import requests
 from concurrent import futures
 import subprocess as sp
