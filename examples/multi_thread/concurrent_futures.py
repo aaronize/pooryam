@@ -3,11 +3,8 @@
 
 import re
 import time
-import logging
-import requests
 import subprocess as sp
-
-URL = ''
+from concurrent import futures
 
 
 def exec_cmd(cmd):
@@ -29,7 +26,7 @@ def exec_cmd(cmd):
         ret_code = process.returncode
         err_msg = process.stderr.read().decode('utf-8')
 
-        if re.search('Connection refused|Permission denied', err_msg) is not None:
+        if re.search('Connection refused|Permission denied', err_msg) is None:
             if ret_code != 0:
                 print '返回码：', ret_code, '错误信息：', err_msg
                 return False
@@ -49,16 +46,27 @@ def callback_after(arg):
     try:
         if res:
             print 'callback_after收到返回信息', res
-            requests.post(URL, )
         else:
             print 'callback_after收到返回信息', res
     except Exception, e:
-        pass
+        print 'callback exception，', str(e)
+
+    return
 
 
 def release(info_list):
-    pass
+    # ret = list()
+    # task_list = list()
+
+    exector = futures.ThreadPoolExecutor()
+    for info in info_list:
+        exector.submit(exec_cmd, info['CMD']).add_done_callback(callback_after)
+
+    return
 
 
 if __name__ == '__main__':
-    pass
+    infos = [{
+        'CMD': '/usr/bin/ssh -l root 192.168.152.183 "touch /tmp/test.txt; echo `date` >> /tmp/test.txt"'
+    }]
+    release(infos)

@@ -12,7 +12,7 @@ import subprocess as sp
 
 
 def download_ipdb(url, path):
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
     etag_value = response.headers.get("ETag")
     current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
