@@ -41,7 +41,16 @@ def get_files(request):
     return HttpResponse(json.dumps(ret))
 
 
-def index(request):
-    res = task_demo.add.delay(1, 3)
-    return HttpResponse(json.dumps({'status': 'successful', 'task_result': res.task_id, 'code': 0}))
+def send_mail(request):
+    param = request.body.decode(encoding='utf-8')
+    send_to = param['to']
+    ret = task_demo.send_mail.delay(dict(to=send_to))
+
+    if ret:
+        pass
+    else:
+        pass
+
+    data = {'status': 'successful', 'task_result': ret.task_id, 'code': 0}
+    return HttpResponse(json.dumps(data), content_type='application/json')
 
