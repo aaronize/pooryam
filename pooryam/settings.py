@@ -141,3 +141,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_TOKEN = "c6275ca833ac06c83926ccb00dff4c82"
+
+# celery configuration
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/'
+CELERY_BROKER_BACKEND = 'redis://127.0.0.1:6379/'
+CELERY_BROKER_SERIALIZER = 'json'

@@ -6,11 +6,13 @@ from django.http import HttpResponse
 
 import json
 import time
+
+from enodes import tasks
 from models import Files
 from public import *
 
-# Create your views here.
 
+# Create your views here.
 def check(request):
     print "this is check..."
     # time.sleep(300)
@@ -22,11 +24,13 @@ def check(request):
 
     return HttpResponse(json.dumps(ret))
 
+
 def verify(request):
     print "verifying info..."
     ret = {"Action": "verify", "Message": "verify_success", "Info": ""}
 
     return HttpResponse(json.dumps(ret))
+
 
 def get_files(request):
     file_list = Files.objects.all()
@@ -37,4 +41,7 @@ def get_files(request):
     return HttpResponse(json.dumps(ret))
 
 
+def index(request, *args, **kwargs):
+    res = tasks.add.delay(1,3)
+    return HttpResponse({'status': 'successful', 'task_result': res, 'code': 0})
 
