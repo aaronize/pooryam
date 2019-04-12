@@ -7,7 +7,7 @@ from django.http import HttpResponse
 import json
 import time
 
-from enodes import tasks
+from enodes.tasks import task_demo
 from models import Files
 from public import *
 
@@ -41,7 +41,7 @@ def get_files(request):
     return HttpResponse(json.dumps(ret))
 
 
-def index(request, *args, **kwargs):
-    res = tasks.add.delay(1,3)
+def index(request):
+    res = task_demo.add.delay(1,3)
     return HttpResponse({'status': 'successful', 'task_result': res, 'code': 0})
 
