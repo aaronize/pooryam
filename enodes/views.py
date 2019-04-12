@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 import json
 import time
@@ -41,6 +42,7 @@ def get_files(request):
     return HttpResponse(json.dumps(ret))
 
 
+@csrf_exempt
 def send_mail(request):
     param = request.body.decode(encoding='utf-8')
     send_to = param['to']
