@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^check/', views.check),
     url(r'^verify/', views.verify),
     url(r'^file/', views.get_files),
+    url(r'^index/', views.index),
 ]
