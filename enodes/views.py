@@ -42,6 +42,6 @@ def get_files(request):
 
 
 def index(request):
-    res = task_demo.add.delay(1,3)
+    res = task_demo.add.delay(1, 3)
     return HttpResponse(json.dumps({'status': 'successful', 'task_result': res.task_id, 'code': 0}))
 
