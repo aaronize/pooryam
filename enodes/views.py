@@ -44,7 +44,7 @@ def get_files(request):
 
 @csrf_exempt
 def send_mail(request):
-    param = request.body.decode(encoding='utf-8')
+    param = json.loads(request.body.decode(encoding='utf-8'))
     send_to = param['to']
     ret = task_demo.send_mail.delay(dict(to=send_to))
 
