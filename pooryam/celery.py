@@ -4,7 +4,7 @@ from celery import Celery
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pooryam.settings')
 
-app = Celery('pooryam')
+app = Celery(b'pooryam')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
