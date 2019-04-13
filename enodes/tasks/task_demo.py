@@ -12,4 +12,5 @@ import time
 def send_mail(mail):
     print 'sending mail to {}...'.format(mail['to'])
     time.sleep(2.0)
+
     print 'mail sent.'
