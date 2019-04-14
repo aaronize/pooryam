@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # custom middleware
     'pooryam.customMiddlewares.Authenticate',
     'pooryam.customMiddlewares.Audit',
 ]
@@ -144,5 +145,5 @@ AUTH_TOKEN = "c6275ca833ac06c83926ccb00dff4c82"
 
 # celery configuration
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
-CELERY_BROKER_BACKEND = 'redis://127.0.0.1:6379/0'
+CELERY_BROKER_BACKEND = 'redis://127.0.0.1:6379/1'
 CELERY_BROKER_SERIALIZER = 'json'
