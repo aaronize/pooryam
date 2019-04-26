@@ -36,6 +36,35 @@ class Employee:
         # cls是类本身
         print 'Job is:{}'.format(cls.emp_job)
 
+    @property
+    def get_property(self):
+        return 'properties: {}'.format(self.emp_job)
+
+
+class Goods(object):
+
+    def __init__(self):
+        self.original_price = 100
+        self.discount = 0.88
+
+    @property
+    def price(self):
+        final_price = self.original_price * self.discount
+        return final_price
+
+    @price.setter
+    def price(self, value):
+        self.original_price = value
+
+    @price.deleter
+    def price(self):
+        del self.original_price
+
+    # 和@property
+    # @price.getter
+    # def price(self):
+    #     return self.original_price
+
 
 if __name__ == '__main__':
     emp = Employee('aaron', '100', 'engineer')
@@ -54,3 +83,17 @@ if __name__ == '__main__':
     emp2 = Employee('Shawn', '200', 'Sales')
     emp.display_job()
     emp.display_count()  # 2
+
+    # 属性的调用,直接调用不用()
+    print emp.get_property
+    print '-'*60
+
+    gd = Goods()
+    print 'price is ', gd.price
+    gd.price = 200
+    print 'price is ', gd.price
+    # print 'price is ', gd.price
+
+    del gd.price
+    # 删除origin_price字段
+    # print 'price is ', gd.price
