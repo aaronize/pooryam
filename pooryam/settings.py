@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'pooryam.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 if os.environ.get('EXP_ENV') == 'production':
-    from config.production import *
+    from configurate.production import *
     # from config import production as conf
 else:
-    from config.development import *
+    from configurate.development import *
     # from config import development as conf
 
 
