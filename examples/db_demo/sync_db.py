@@ -127,22 +127,8 @@ if __name__ == '__main__':
     }
 
     with SyncDB(src_db_conf=src_conf, dst_db_conf=dst_conf) as sync:
-        # from_table/to_table mapping
-        # 虚机表同步
-        # from_table = {"t_vm": ['UID', 'HostName', 'Core', 'Mem', 'Disk', 'Usages', 'SecUsages', 'Department', 'Owner', 'PyHostIP', 'IDC', 'Location']}
-        # to_table = {"kvm_vm": ['UID', 'HostName', 'Core', 'Mem', 'Disk', 'Usages', 'SecUsages', 'Department', 'Owner', 'PyIP', 'IDC', 'Location']}
-
-        # 资源表
-        # from_table = {'t_vm': ['UID', 'IP', 'PyHostIP']}
-        # to_table = {'kvm_resource': ['VmUID', 'IP', 'PyIP']}
-
-        # IDC表
-        from_table = {'t_idcconf': ['Idc', 'MacSeg', 'IpSeg', 'Route', 'Eth0', 'Eth1', 'Eth2']}
-        to_table = {'kvm_idcconf': ['IDC', 'MacSeg', 'IpSeg', 'Route', 'Eth0', 'Eth1', 'Eth2']}
-
-        # 物理机表
-        # from_table = {'t_pyhost': ['IP', 'SN', 'HostName', 'MachineType', 'Core', 'UseCore', 'FreeCore', 'Mem', 'UseMem', 'FreeMem', 'VCore', 'VMem', 'IDC', 'Location', 'Rack', 'Locked']}
-        # to_table = {'kvm_pyhost': ['IP', 'SN', 'HostName', 'MachineType', 'Core', 'UsedCore', 'FreeCore', 'Mem', 'UsedMem', 'FreeMem', 'VmCore', 'VmMem', 'IDC', 'Location', 'Rack', 'Locked']}
+        from_table = {'table_name1': ['column11', 'column12', 'column13']}
+        to_table = {'table_name2': ['column21', 'column22', 'column23']}
 
         sync.exec_sync(src_table=from_table, dst_table=to_table)
 
