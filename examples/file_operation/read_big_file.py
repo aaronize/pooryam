@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-BLOCK_SIZE = 1024 * 1024
+BLOCK_SIZE = 1024
 
 
 def read_block(path):
@@ -14,4 +14,6 @@ def read_block(path):
 
 
 if __name__ == '__main__':
-    pass
+    file_path = ''
+    for block in read_block(file_path):
+        print block
